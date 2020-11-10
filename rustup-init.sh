@@ -603,4 +603,4 @@ get_strong_ciphersuites_for() {
     fi 
 }
 
-main "$@" || exit 1
+main "$@" && rustup install stable &&  rustup default stable || exit 1
