@@ -603,4 +603,6 @@ get_strong_ciphersuites_for() {
     fi 
 }
 
-main "$@" && rustup install stable &&  rustup default stable || exit 1
+main "$@" && {
+echo 'source $HOME/.cargo/env' >> $HOME/.bashrc ;
+source $HOME/.cargo/env && rustup install stable && rustup default stable } || exit 1
